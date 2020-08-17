@@ -16,9 +16,4 @@ if __name__ == '__main__':
 
         k = int(nk[1])
 
-        max = -sys.maxsize - 1
-        for i in range(1, n):
-            for j in range(i + 1, n + 1):
-                if (i & j) < k and (i & j) > max:
-                    max = i & j
-        print(max)
+        print(k - 1 if ((k - 1) | k) <= n else k - 2)
